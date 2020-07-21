@@ -12,9 +12,9 @@
         this.produit = {};
 
         this.ajouterProduitAuCaddie = function (produit) {
-
-            if (undefined!==produit.qty) {
-                produit.qty+=1;
+            var prd=panierSrvc.isAlreadyInCart(produit);
+            if (undefined!==prd) {
+                prd.qty+=1;
             }
             else {
                 var _prod = produit;
