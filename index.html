@@ -80,7 +80,7 @@
                     </td>
                 </tr>
             </table>
-            {{panier.arrayPanier|json}}
+            <div ng-if="panier.arrayPanier.length>0">{{panier.arrayPanier|json}}</div>
         </div>
         <div id="view-content">
             <div class="produits" ng-controller="produitsCtrl as prds">

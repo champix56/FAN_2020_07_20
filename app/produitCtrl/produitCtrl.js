@@ -8,5 +8,5 @@ angular.module('app').controller('produitCtrl', ['$scope','produitService', func
 
     // }    
    
-    prdSrvc.getProduit(1);
+   // prdSrvc.getProduit(1);
 }]);
