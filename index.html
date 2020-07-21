@@ -68,7 +68,8 @@
         <div class="panier" ng-controller="panierCtrl as panier">
             <h2>Mon panier</h2>
             <table style="width:100%">
-                <tr ng-repeat="obj in panier.arrayPanier" ng-click="onviewproduitclick(obj)" >
+                <tr ng-repeat="obj in panier.arrayPanier track by $index" ng-click="onviewproduitclick(obj)" >
+                    <td>{{$index}}</td>
                     <td><img style="max-height: 64px;max-width: 64px;" src="/img/{{obj.img}}" alt=""></td>
                     <td>{{obj.nom}}</td>
                     <td>{{obj.qty}}</td>
@@ -84,13 +85,14 @@
         <div id="view-content">
             <div class="produits" ng-controller="produitsCtrl as prds">
                 <h2>Produits :</h2>
-                <div class="produits-produit" ng-repeat="prod in prds.arrayProduit">
+                <div class="produits-produit" ng-repeat="prod in prds.arrayProduit track by $index">
                     <img ng-src="/img/{{prod.img}}" style="max-height: 256px;max-width: 256px;" alt="">
                     <div style="display:inline-block">{{prod.nom}} <br /> 
                         <span style="color:skyblue">{{prod.prix|my_currency}}</span>
                     </div>
                     <div style="display:inline-block">
                         <button type="button" class="btn btn-primary" ng-click="onviewproduitclick(prod)">Voir produit</button>
+                        <button type="button" class="btn btn-warning" ng-click="onaddcartclick(prod)">ajouter produit</button>
                     </div>
 
                 </div>
@@ -119,6 +121,8 @@
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/app/app.js"></script>
     <script src="/app/currencyFilter/currencyFilter.js"></script>
+    <script src="/app/panierService/panierService.js"></script>
+    <script src="/app/produitService/produitService.js"></script>
     <script src="/app/panierCtrl/panierCtrl.js"></script>
     <script src="/app/produitsCtrl/produitsCtrl.js"></script>
     <script src="/app/produitCtrl/produitCtrl.js"></script>

@@ -1,23 +1,67 @@
 {
-    "produits": [
-        {
-            "id": 1,
-            "nom" : "cidre breton brut",
-            "prix": 2.54,
-            "desc":"Super cidre breton très digeste accompagne bien le kouig aman",
-            "stars":5,
-            "img":"barratte.jpg",
-            "stock":5
-        }
-    ],
-    "paniers": [{
-        "id":0,
-        "produits":[
-            {"produitId":1,"qty":2},
-            {"produitId":1,"qty":1}
-        ]
-    }],
-    "boutique": {
-        "raisonSocial": "mon shOOping"
+  "categories": [
+    {
+      "id": 1,
+      "nom": "alimentaire"
+    },
+    {
+      "id": 2,
+      "nom": "loisir"
+    },
+    {
+      "id": 3,
+      "nom": "divers"
     }
+  ],
+  "produits": [
+    {
+      "id": 2,
+      "categorieId": 2,
+      "nom": "jeu de palet breton",
+      "prix": 15,
+      "desc": "Super jeu depalet breton poids competiteur",
+      "stars": 5,
+      "img": "palet.jpg",
+      "stock": 5
+    },
+    {
+      "id": 1,
+      "categorieId": 1,
+      "nom": "cidre breton brut",
+      "prix": 2.54,
+      "desc": "Super cidre breton très digeste accompagne bien le kouig aman",
+      "stars": 5,
+      "img": "cidre.jpg",
+      "stock": 5
+    },
+    {
+      "categorieId": 1,
+      "nom": "beurre breton salé",
+      "prix": 2.2,
+      "desc": "Super beurre breton très digeste accompagne bien le kouig aman",
+      "stars": 5,
+      "img": "barratte.jpg",
+      "stock": 2,
+      "id": 3,
+      "noteClient": 5
+    }
+  ],
+  "paniers": [
+    {
+      "id": 0,
+      "produits": [
+        {
+          "produitId": 1,
+          "qty": 2
+        },
+        {
+          "produitId": 1,
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "boutique": {
+    "raisonSocial": "mon shOOping"
+  }
 }

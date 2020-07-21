@@ -1,5 +1,11 @@
-angular.module('app').controller('produitsCtrl',['$scope',function($scope){
-    this.arrayProduit=[
-        {nom:'beurre Salé',prix:1.00,desc:'Beurre salé ++',img:'barratte.jpg',stars:5},{nom:'beurre Salé',prix:1.10,desc:'Beurre salé ++',img:'barratte.jpg',stars:5},{nom:'beurre Salé',prix:1.25,desc:'Beurre salé ++',img:'barratte.jpg',stars:5}];
-        $scope.onviewproduitclick=function(produit){console.log(produit);}
+angular.module('app').controller('produitsCtrl', ['$scope', 'produitService', function ($scope, prdSrvc) {
+    var _vm = this;
+    this.arrayProduit = prdSrvc.arrayProduits;
+    $scope.onviewproduitclick = function (produit) {
+        prdSrvc.setProduit(produit)  ;
+        //prdSrvc.getProduit(produit.id);
+        console.log(produit);
+    }
+    $scope.onaddcartclick =prdSrvc.ajouterProduitAuCaddie;
+    
 }]);

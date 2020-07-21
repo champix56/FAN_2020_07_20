@@ -1,8 +1,12 @@
-angular.module('app').controller('produitCtrl', ['$scope', function ($scope) {
-    this.chaine1 = 'Demat breizhouz';
-    this.produit={nom:'beurre Salé',prix:1.00,desc:'Beurre salé ++',img:'barratte.jpg',stars:5};
-    $scope.onaddcartclick=function(prod){
-        console.log('produit ajouté:',prod);
-    }
-    
+angular.module('app').controller('produitCtrl', ['$scope','produitService', function ($scope,prdSrvc) {
+    var _vm=this;
+    // this.chaine1 = 'Demat breizhouz';
+    this.produit =prdSrvc.produit;
+     $scope.onaddcartclick =prdSrvc.ajouterProduitAuCaddie;
+     // function (prod) {
+    //     console.log('produit ajouté:', prod);
+
+    // }    
+   
+    prdSrvc.getProduit(1);
 }]);
