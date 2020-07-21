@@ -1,0 +1,23 @@
+{
+    "produits": [
+        {
+            "id": 1,
+            "nom" : "cidre breton brut",
+            "prix": 2.54,
+            "desc":"Super cidre breton très digeste accompagne bien le kouig aman",
+            "stars":5,
+            "img":"barratte.jpg",
+            "stock":5
+        }
+    ],
+    "paniers": [{
+        "id":0,
+        "produits":[
+            {"produitId":1,"qty":2},
+            {"produitId":1,"qty":1}
+        ]
+    }],
+    "boutique": {
+        "raisonSocial": "mon shOOping"
+    }
+}
