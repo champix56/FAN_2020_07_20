@@ -65,7 +65,7 @@
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
-        <div class="panier" ng-controller="panierCtrl as panier">
+        <div class="panier" ng-controller="panierCtrl as panier" ng-show="panier.arrayPanier.length">
             <h2>Mon panier</h2>
             <table style="width:100%">
                 <tr ng-repeat="obj in panier.arrayPanier track by $index" ng-click="onviewproduitclick(obj)" >
